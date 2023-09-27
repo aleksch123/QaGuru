@@ -1,3 +1,5 @@
+import com.sun.javafx.runtime.SystemProperties
+
 plugins {
     id 'java-library'
 }
@@ -18,4 +20,5 @@ tasks.withType(JavaCompile) {
 
 test {
     useJUnitPlatform()
+    SystemProperties(System.getProperties())
 }
