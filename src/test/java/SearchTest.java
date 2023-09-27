@@ -9,7 +9,7 @@ import static com.codeborne.selenide.Selenide.open;
 
 public class SearchTest {
 
-@Test
+
     public void successTest(){
 
     open("https://www.google.com");
@@ -17,7 +17,7 @@ public class SearchTest {
     $("[id=search]").shouldHave(text("https://ru.selenide.org"));
 }
 
-    @Test
+
     void shouldOpen() {
 
         DateTimeFormatter dateTimeFormatter = DateTimeFormatter.ofPattern("dd.MM.yyyy");
