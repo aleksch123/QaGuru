@@ -7,8 +7,7 @@ public class TestBase {
     @BeforeAll
     static void beforeAll(){
 
-        Configuration.baseUrl="https://cloud.google.com";
-
+        Configuration.baseUrl="https://demoqa.com";
         Configuration.browserSize="1366x1200";
         Configuration.pageLoadStrategy="eager";
        // Configuration.remote = "http://localhost:4444/wd/hub";
