@@ -11,8 +11,8 @@ public class TestBase {
 
         Configuration.browserSize="1366x1200";
         Configuration.pageLoadStrategy="eager";
-        Configuration.remote = "http://localhost:4444/wd/hub";
-        Configuration.browser = "chrome";
+       // Configuration.remote = "http://localhost:4444/wd/hub";
+       // Configuration.browser = "chrome";
 
     }
 }
