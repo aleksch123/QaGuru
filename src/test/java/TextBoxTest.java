@@ -68,27 +68,9 @@ public class TextBoxTest extends TestBase{
         $(".modal-dialog").should(appear);
         $("#example-modal-sizes-title-lg").shouldHave(text("Thanks for submitting the form"));
 
-
-
-
-
-
-        System.out.println();
     }
 
-    @Test
-    public void test2(){
 
-        open("/products/calculator");
-        switchTo().frame($x("//iframe[contains(@src,'cloud.google.com/frame/products/calculator/index')]"));
-        switchTo().frame($("#myFrame"));
-        $("#input_98").click();
-        System.out.println();
-
-
-
-
-    }
 
 
 
