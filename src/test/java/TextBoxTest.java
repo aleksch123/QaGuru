@@ -64,6 +64,7 @@ public class TextBoxTest extends TestBase{
         $("#currentAddress").setValue("MyAdress");
         $("#userNumber").setValue("1234567890");
         $("#submit").click();
+        $("#submit").sendKeys("");
 
         $(".modal-dialog").should(appear);
         $("#example-modal-sizes-title-lg").shouldHave(text("Thanks for submitting the form"));

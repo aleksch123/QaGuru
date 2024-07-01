@@ -9,7 +9,7 @@ import static com.codeborne.selenide.Selenide.open;
 
 public class SearchTest {
 
-
+ @Test
     public void successTest(){
 
     open("https://www.google.com");
@@ -17,6 +17,9 @@ public class SearchTest {
     $("[id=search]").shouldHave(text("https://ru.selenide.org"));
 }
 
+   public String getValue(){
+     return "Selenide";
+   }
 
     void shouldOpen() {
 

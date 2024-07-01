@@ -2,15 +2,28 @@ import java.util.*;
 import java.util.regex.Pattern;
 import java.util.stream.Collectors;
 import java.util.stream.IntStream;
-import java.util.stream.Stream;
 
 public class LifeCode {
 
     public static void main(String[] args) {
 
 
-            int[] income={4,7,9,25,6,8,3,1,2,24};
-            findTwoMax(income);
+            Integer[] income={4,7,9,25,6,8,9,7,4,7};
+        System.out.println(Arrays.toString(deleteDub(income)));
+            //findTwoMax(income);
+
+        //System.out.println(isStrPallindrom("А роза упала на лапу Азору"));
+        System.out.println(reverseStr3("Azure is the best company in th world"));
+//        String str ="Azure is the best company in th world";
+//        String[] strArr=str.split(" ");
+//        String newStr="";
+//        for (String word:strArr){
+//            newStr=newStr+revertStr(word)+" ";
+//
+//        }
+//        System.out.println(newStr);
+
+
 
 
 
@@ -22,6 +35,7 @@ public class LifeCode {
         Pattern.compile("")
                 .splitAsStream(inputStr)
                 .forEach(s->resultMap.put(s,resultMap.getOrDefault(s,0)+1));
+
         return resultMap;
     }
 
@@ -49,6 +63,18 @@ public class LifeCode {
         Arrays.stream(incomeStr.split("")).forEach(s->outcomeStr.insert(0,s));
         return outcomeStr.toString();
 
+    }
+
+    static String reverseStr2(String incomeStr){
+        String newStr="";
+        String[] arrStr = incomeStr.split("");
+        for (String str:arrStr) {
+            newStr=str+newStr;
+        }
+     return newStr;
+    }
+    static String reverseStr3(String incomeStr){
+         return new StringBuilder(incomeStr).reverse().toString();
     }
 
     static void fizzBuzz(){
@@ -105,6 +131,25 @@ public class LifeCode {
         }
         System.out.println("max1="+max1);
         System.out.println("max2="+max2);
+    }
+
+    //Проверка строки на палиндром
+
+    static Boolean isStrPallindrom(String incomeStr){
+
+      String str = incomeStr.replaceAll("\\s+","");
+
+       return IntStream.range(0,str.length()/2).allMatch(e->str.toLowerCase().charAt(e)==str.toLowerCase().charAt(str.length()-1-e));
+
+    }
+
+    public static Integer[] deleteDub(Integer[] incomeInt){
+
+        List<Integer> myList= Arrays.stream(incomeInt).distinct().collect(Collectors.toList());
+        Integer []outcome = new Integer[myList.size()];
+        myList.toArray(outcome);
+
+        return  outcome;
     }
 
 
